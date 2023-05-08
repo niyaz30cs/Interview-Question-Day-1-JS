@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Day-1</title>
+</head>
+<body>
+    <h2 class="question">Q-1.What are the differences between var,let,const?</h2>
+    <h2 class="ans">ANS:-</h2>
+    <table border="2px" cellspacing="0px">
+        <tr>
+            <th>var</th>
+            <th>let</th>
+            <th>const</th>
+        </tr>
+        <tr>
+            <td>(1).var is keyword used to declare variable in javascript.</td>
+            <td>(1).let is keyword used to declare variable in javascript just like var.</td>
+            <td>(1).const is keyword used to declare constant in javascript.</td>
+        </tr>
+        <tr>
+            <td>(2).var is function scoped.variable declare inside function.</td>
+            <td>(2).let is function scoped.variable declare inside a block.</td>
+            <td>(2).const is also block scoped.</td>
+        </tr>
+        <tr>
+            <td>(3).var is a redeclared and reInitialized.</td>
+            <td>(3).let con not be redeclared and reInitialized.</td>
+            <td>(3).const con not be redeclared and reInitialized.</td>
+        </tr>
+        <tr>
+            <td>(4).if var declared outside of the function.it become globally scope.</td>
+            <td>(4).if you deckared a variable with let twice in the same block,an error will be thrown.
+            <td>(4).const can not be change able.</td>    
+            </td>
+        </tr>
+    </table>
+<p class="star">*********************************************************************************************</p>    
+    <h2 class="question">Q-2.What is hoisting?</h2>
+    <h2 class="ans">ANS:-</h2>
+    <h3>Hoisting:-Hoisting is term used in javascript that describes how variable and function declaration
+        are processed during the compilation phase.
+        <ul>
+            <li>Hoisting is Javascript's default behavior of moving declaration to the top.
+            <li>In Javascript a variable can be declared after it has been used.</li>
+            <li>In other word;a variable can be used before it has been declared.</li>
+            </li>
+        </ul>
+    </h3>
+    <p class="star">*********************************************************************************************</p>    
+
+    <h2 class="question">Q-3.What is a Temporal Dead Zone?</h2>
+    <h2 class="ans">ANS:-</h2>
+    <h3>
+        <ul>
+            <li>A Temporal dead zone(TDZ) is the area of a block where a variable is inaccessible
+                untile the moment the computer completely initialize it with a value.
+            </li>
+            <li>A block is a pair of braces used to group multiple statements</li>
+            <li>If we are try to access variable use let and const before there initialization then give refrance error.</li>
+        </ul>
+    </h3>
+    <p class="star">*********************************************************************************************</p>    
+   
+    <h2 class="question">Q-4.What is execution context?</h2>
+    <h2 class="ans">ANS:-</h2>
+    <h3>
+        <ul>
+            <li>Execution context is abstract of the environment.where Javascript code evaluate and execute.</li>
+            <li>Javascript engine help us to execute javascript code on JS engine.</li>
+            <li>Javascript engine uses call stack and create special environment.</li>
+            <li>To handle the transformation and execution of this javascript code.</li>
+            <ol>
+                <h2>There are two types of execution context.</h2>
+                <li>Global execution(GEC):-the javascript engine receive script file. it first create default
+                    execution context known as global execution context.
+                </li>
+                <li>Function execution(FEC):-the javascript engine create a different type of execution context know
+                    as function execution context.
+                </li>
+            </ol>
+            <h2>Execution context phase</h2>
+            <ol>
+                <li>Creation Phase:-memory allocation,function declaration,variable declaration</li>
+                <li>Execution Phase</li>
+            </ol>
+        </ul>
+    </h3>
+    <p class="star">*********************************************************************************************</p>        
+
+    <h2 class="question">Q-5.What is an event loop and call stack?</h2>
+    <h2 class="ans">ANS:-</h2>
+    <h3>Event Loop:-Javascript has a runtime model based on an event loop,which is responsible for
+        executing the code colecting and processing event callback queued and callstack.
+        <ul>
+            <li>All the web api like settime function and setinterval we lot be directly executed.</li>
+            <li>Callback Queued:-it will consist several type of function from the web API</li>
+            <li>Web API:-Web API is present every browser all asynchronous function and our DOM part
+                already present inside the Web API.
+            </li>
+        </ul>
+    </h3>
+    <h3>Call stack:-A Call stack is mechanism for an interpreter to keep track code in a script that Call
+        multiple function.
+        <ul>
+            <li>We can store that global context and function execution context in LIFO manner.</li>
+            <li>Javascript engine uses call stack to manage execution context.</li>
+            <li>Call stack base on LIFO principle.</li>
+            <li>The call stack is primarily used for function invocation(call).</li>
+        </ul>
+    </h3>
+    <p class="star">*********************************************************************************************</p>    
+    
+    <h2 class="question">Q-6.What are callback function?</h2>
+    <h2 class="ans">ANS:-</h2>
+    <h3>
+        <ul>
+            <li>call back function is function passed into another function as argument.</li>
+            <li>This technique allows a function to call another function.</li>
+            <li>A call back function can run after another function has finished.</li>
+            <li>Example:-</li>
+            function function1(){
+                mydisplay("hello");
+            }
+            function function2(){
+                mydisplay("Goodbye");
+            }
+            function1();
+            function2();
+        </ul>
+    </h3>
+    <p class="star">*********************************************************************************************</p>    
+    
+    <h2 class="question">Q-7.What is meant by first class functions?</h2>
+    <h2 class="ans">ANS:-</h2>
+    <h3>
+        <ul>
+            <li>A programming language is said to be have first-class functions when functions in 
+                that language are treated like any other variable.
+            </li>
+            <li>First class function same as callback function.</li>
+            <li>first class function treated as variable. that can be assigned any other variable.</li>
+            <li>passes as argument inside an another function.can be return from a function.</li>
+            <li>Example:-1</li>
+            const add=function(){
+                console.log("Hii");
+            }
+            add();
+            <li>Example:-2</li>
+            function demo(){
+                return function demo2(){
+                    console.log("Hello");
+                }
+            }
+            demo()();
+        </ul>
+    </h3>
+    <p class="star">*********************************************************************************************</p>    
+    
+    <h2 class="question">Q-8.Explain call(),apply(),and bind() method,an example of call(),apply(),bind()</h2>
+    <h2 class="ans">ANS:-</h2>
+    <h3>
+        <ol>
+            <li>call() method:-The call method call a function with a given <em>this</em> value and 
+            arguments provided induvidually.</li>
+            <ul>
+                <li>The call method binds the this value to the function and execute the function.</li>
+                <li>Example:-</li>
+                const obj={
+                         name:"niyaz",
+                         age:22}
+                    
+                     function display(com, sal){
+                        console.log(this.name,this.age,com,sal);
+                     }
+                    
+                     //call
+                     display.call(obj,"prepbytes","5LPA");
+                    
+            </ul>
+            <li>apply() method:- The call method binds the this value to the function and execute the function.</li>
+            <ul>
+                <li>it takes the this value and a single array.it returns the value returned by the 
+                    function,which is called using the apply method.
+                </li>
+                <li>Example:-</li>
+                const obj={
+                        name:"niyaz",
+                        age:22}
+                    
+                     function display(com, sal){
+                        console.log(this.name,this.age,com,sal);
+                    }
+                    
+                     //apply
+                     display.apply(obj,["prepbytes","5LPA"]);   
+            </ul>
+            <li>bind() method:-the bind method binds the this value to the function and return the new function.</li>
+            <ul>
+                <li>Example:-</li>
+                const obj={
+                         name:"niyaz",
+                         age:22}
+                    
+                     function display(com, sal){
+                         console.log(this.name,this.age,com,sal);
+                    }
+                     //bind
+                     const func2=display.bind(obj,"prepbytes","5LPA");
+                     func2();
+            </ul>
+        </ol>
+    </h3>
+    <p class="star">*********************************************************************************************</p>    
+    
+    <h2 class="question">Q-9.Difference between "==" and "===" operators.</h2>
+    <h2 class="ans">ANS:- </h2>
+    <h3>
+    <ol>
+        <li>Both are comparison operator and they return boolean values always.the difference between
+            both the operators is that"==" is used to compare value whereas "===" is used to compare both
+            value and datatype.
+        </li>
+        <li>var x="2";
+            <br>
+            var y=2; 
+        </li>
+        <li>console.log(x==y);it return true because it only check value not datatype.</li>
+        <li>console.log(x===y);it return false because the you can see the value are same but x is 
+            string and y is number type so give return false.
+        </li>
+
+    </ol>
+    </h3>
+    <p class="star">*********************************************************************************************</p>    
+    
+    <h2 class="question">Q-10.What is the spread operator?</h2>
+    <h2 class="ans">ANS:-</h2>
+    <h3>The Javascript spread operator(...) allows us to destructure the non primitive data type
+        array and object to access the element induvisually.
+        <br>
+        <pre>
+            code:- 
+
+            const numberOne=[1,2,3];
+            const numberTwo=[4,5,6];
+            const numberCombined=[...numberOne,...numberTwo];
+            console.log(numberCombined);
+
+            OUTPUT:-[1,2,3,4,5,6]
+        </pre> 
+    </h3>
+    <p class="star">*********************************************************************************************</p>    
+    <h2 class="question">Q-11.What is pure and impure function?</h2>
+    <h2 class="asn">ANS:-</h2>
+    <h3>
+        <ol>
+            <li>Pure Function:- 
+                <ul>
+                    <li>It always return the same output as the same input argument.</li>
+                    <li>It don't depend upon any state or data changes during the programming execution.</li>
+                    <li>Example:-</li>
+                    <pre>
+                        const add=(a)=>{
+                            return a+5;
+                        }
+                        console.log(add(3));
+                    </pre>
+                </ul>
+            </li>
+            <li>Impure function:- 
+                <ul>
+                    <li>Impure function is depend on other variable and ouput change every time depend on varable. </li>
+                    <li>Example:-</li>
+                    <pre>
+                        var b=5;
+                        const add=(a)=>{
+                            return b*a+5;
+                        }
+                        console.log(add(3));
+                    </pre>
+                </ul>
+            </li>
+        </ol>
+    </h3>
+<p class="star">*********************************************************************************************</p>    
+
+</body>
+<script src="./script.js"></script>
+</html>
