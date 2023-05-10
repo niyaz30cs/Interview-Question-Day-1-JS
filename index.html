@@ -169,6 +169,7 @@
             <ul>
                 <li>The call method binds the this value to the function and execute the function.</li>
                 <li>Example:-</li>
+                <pre>
                 const obj={
                          name:"niyaz",
                          age:22}
@@ -179,7 +180,7 @@
                     
                      //call
                      display.call(obj,"prepbytes","5LPA");
-                    
+                    </pre>
             </ul>
             <li>apply() method:- The call method binds the this value to the function and execute the function.</li>
             <ul>
@@ -187,6 +188,7 @@
                     function,which is called using the apply method.
                 </li>
                 <li>Example:-</li>
+                <pre>
                 const obj={
                         name:"niyaz",
                         age:22}
@@ -197,10 +199,12 @@
                     
                      //apply
                      display.apply(obj,["prepbytes","5LPA"]);   
+                     </pre>
             </ul>
             <li>bind() method:-the bind method binds the this value to the function and return the new function.</li>
             <ul>
                 <li>Example:-</li>
+                <pre>
                 const obj={
                          name:"niyaz",
                          age:22}
@@ -211,6 +215,7 @@
                      //bind
                      const func2=display.bind(obj,"prepbytes","5LPA");
                      func2();
+                     </pre>
             </ul>
         </ol>
     </h3>
